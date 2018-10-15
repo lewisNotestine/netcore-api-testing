@@ -24,8 +24,7 @@ namespace test
             App = WebHost.CreateDefaultBuilder()
                          .UseKestrel()
                          .UseContentRoot(Directory.GetCurrentDirectory())
-                         // TODO: when i try to use TestStartup it fails...
-                         .UseStartup<Startup>()
+                         .UseStartup<TestStartup>()
                          .UseUrls("http://localhost:9999")
                          .Build();
 
